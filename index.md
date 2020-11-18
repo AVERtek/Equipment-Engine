@@ -23,6 +23,16 @@
   </button>
 </model-viewer>
 
+<script>
+(() => {
+  const modelViewer = document.querySelector("#paused-change-demo");
+
+  self.setInterval(() => {
+    modelViewer.animationName = modelViewer.animationName === "Idle" ?
+      "Take 001" : "Idle";
+  }, 500.00
+})();
+</script>
 <!-- Loads <model-viewer> for modern browsers: -->
  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
   </script>
